@@ -4,6 +4,11 @@ import retrofit.GsonConverterFactory
 import retrofit2.Retrofit
 import kotlin.reflect.KProperty
 
+private val Any.builder: Any
+    get() {
+        TODO("Not yet implemented")
+    }
+
 const val BASE_URL = "/rapidapi.com/"
 object APIInstance {
     val api: APIInt by lazy {
@@ -12,8 +17,11 @@ object APIInstance {
 }
 
 private fun Retrofit.Builder.addGsonConverter(): Retrofit.Builder {
-    addConverterFactory(GsonConverterFactory.create())
-    return this
+    return builder.addConverterFactory(GsonConverterFactory.create())
+}
+
+private fun Any.addConverterFactory(create: GsonConverterFactory?): Retrofit.Builder {
+    TODO("Not yet implemented")
 }
 
 private fun createAPI() : APIInt {

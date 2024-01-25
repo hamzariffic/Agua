@@ -33,7 +33,7 @@ import com.example.agua.ui.theme.AguaTheme
 
 class MainActivity : ComponentActivity() {
 
-    @OptIn(ExperimentalMaterial3Api::class)
+    @OptIn(ExperimentalMaterial3Api::class) 
     @Composable
     fun MainScreen() {
         Box(
@@ -104,7 +104,8 @@ class MainActivity : ComponentActivity() {
                     .padding(9.dp)
             ) {
 //       Videos for aquatic animals
-                val api = APIInstance.api            }
+                APIInstance.api
+            }
         }
 
         // LazyColumn for sustainability blogs
