@@ -27,7 +27,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.agua.Network.APIInstance
-import com.example.agua.Network.APIInt.Companion.getData
 import com.example.agua.ui.theme.AguaTheme
 
 

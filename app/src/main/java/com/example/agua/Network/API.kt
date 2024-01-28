@@ -13,7 +13,7 @@ interface APIInt : List<User> {
     companion object : APIInt {
         private var apiInstance:APIInt? = null
 
-        override suspend fun  getData() : List<User> {
+        fun  getInstance() : List<User> {
             if (apiInstance == null){
                 apiInstance = Retrofit.Builder()
                     .baseUrl(BASE_URL)
@@ -22,10 +22,11 @@ interface APIInt : List<User> {
             }
             return apiInstance!!
         }
-    }
 
-    override val size: Int
-        get() = TODO("Not yet implemented")
+        override suspend fun getData(): List<User> {
+            TODO("Not yet implemented")
+        }
+    }
 
     override fun get(index: Int): User {
         TODO("Not yet implemented")
@@ -42,6 +43,9 @@ interface APIInt : List<User> {
     override fun listIterator(): ListIterator<User> {
         TODO("Not yet implemented")
     }
+
+    override val size: Int
+        get() = TODO("Not yet implemented")
 
     override fun listIterator(index: Int): ListIterator<User> {
         TODO("Not yet implemented")
